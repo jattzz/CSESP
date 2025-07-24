@@ -46,10 +46,13 @@ int main(){
     while(itr < 2*n){
         if(ml[idx] > 0){
             cnt += ml[idx];
+            ml[idx] = 0;
             mxcnt = max(mxcnt, cnt);
         }
         if(mr[idx] > 0){
             cnt -= mr[idx];
+            mr[idx] = 0;
+            cnt = max(0ll, cnt);
         }
         itr++;
         idx = v[itr];
