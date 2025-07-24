@@ -50,3 +50,9 @@ int main(){
     vector<string> res = get(n, len);
     for(auto i: res) cout<<i<<endl;
 }
+
+
+// we can deduce the gray code for n, if we have the gray code for n-1, so basically, for creating 2^5 elements with hamming distance 1, 
+// we can just use the previous 2^4 elements, first we a '0' in front of all of them in normal order, then we put '1' in front of them in reverse order.
+// for n == 1; we can just use {0, 1}, following the above steps, for n = 2, our result will be {00, 01} + {11, 10} => {00, 01, 11, 10};
+// similarly for n == 3; we will have; for 0's => {000, 001, 011, 010}; then for 1's => {110, 111, 101, 100}; and so on.
