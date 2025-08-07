@@ -52,7 +52,6 @@ int main(){
     cout<<res<<endl;
 }
 
-
 // just sort the vectors and use 2 pointers from the left of both to check whether an apartment can be allocated, if not, then check whether its because of desired size being too small or too big, 
 // if the desired size is too small, then since the pointer is already at the smallest allocatable apartment, we just move to the next candidate.
 // similarly if its too large then we move to the next apartment;
